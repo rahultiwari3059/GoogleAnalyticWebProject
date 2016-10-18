@@ -1,23 +1,48 @@
 package com.bridgelabz.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class ResponseElementModel {
+	@Id
+	@GeneratedValue
+	public int id;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	@Column(name="GAID")
 	public String mGaId=null;
+	@Column(name="GAdiscription")
 	public String mGAdiscription=null;
+	
 	public int mMetricSize;
+	@Column
 	public String mDate=null;
+	@Column
 	public String mAndroidId=null;
+	@Column
 	public String mConnectionType=null;
+	@Column
 	public String mEventCategory=null;
+	@Column
 	public String mTotalEvents=null;
+	@Column
 	public String mSessions=null;
+	@Column
 	public String mScreenViews=null;
+	@Column
 	public String mExit=null;
+	@Column
 	public String mExitRate=null;
+	
 	public int mrowArraySize;
 	 
 	public String getmGAdiscription() {

@@ -24,6 +24,12 @@
 		</dependency>
 		<dependency>
     <groupId>org.springframework</groupId>
+    <artifactId>spring-aspects</artifactId>
+    <version>4.3.1.RELEASE</version>
+</dependency>
+		
+		<dependency>
+    <groupId>org.springframework</groupId>
     <artifactId>spring-jdbc</artifactId>
     <version>4.3.1.RELEASE</version>
 </dependency>
@@ -37,6 +43,18 @@
     <artifactId>spring-jms</artifactId>
     <version>4.3.1.RELEASE</version>
 </dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.12</version>
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>4.3.1.Final</version>
+</dependency>
+
 		<dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>

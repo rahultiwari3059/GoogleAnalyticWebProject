@@ -3,6 +3,7 @@ package com.bridgelabz.controller;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
@@ -13,15 +14,21 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bridgelabz.csvfileCreator.SummaryReportcsvandelelementAssigner;
+import com.bridgelabz.dao.HibernateDao;
 import com.bridgelabz.inputReader.GaReprtInfoArrayList;
 import com.bridgelabz.model.GaReportInputModel;
+import com.bridgelabz.model.ResponseElementModel;
 import com.bridgelabz.model.ResponseModel;
 import com.bridgelabz.responseFetcher.GaReportResponseFetcher;
 
 @Controller
 public class GoogleAnalyticController {
+	
+	
 	private static final String UPLOAD_DIRECTORY = "/home/bridgeit/Desktop/GoogleAnalyticwebproject/GoogleAnalyticReportingWeb/src/main/webapp/WEB-INF/FilePath/";
 
+	@Resource(name="hibernateDao")
+	private HibernateDao hibernateDaoObject;
 	@RequestMapping("/uploadform")
 	public ModelAndView uploadForm() {
 		System.out.println("File upload get method");
@@ -57,8 +64,9 @@ public class GoogleAnalyticController {
 						.getResponse(gaReportInputInfoArrayList.get(i));
 
 				// creating csv file by passing input info and response
-				summaryReportcsvandelelementAssignerObject.directCsvFileCreator(gaReportInputInfoArrayList.get(i),
+				ArrayList<ResponseElementModel> responseElementModelArrayList = summaryReportcsvandelelementAssignerObject.responseElementmodelAssigner(gaReportInputInfoArrayList.get(i),
 						responseModelArrayList.get(i));
+				hibernateDaoObject.Save(responseElementModelArrayList);
 			}
 		} catch (Exception e) {
 

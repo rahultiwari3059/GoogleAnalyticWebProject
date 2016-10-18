@@ -1,0 +1,1 @@
+{"result":[{"Name":"AppOpenData","Metric":"ga:totalevents","Dimentions":[{"ga:eventCategory":"data1","ga:date":"yesterday","ga:dimention1":"connectiontype"}],"filters":[{"ga:eventCategary==ga open":"data2","ga:dimention1==10":"data3","Dimention1":"ga:dimention8"}]}]}
