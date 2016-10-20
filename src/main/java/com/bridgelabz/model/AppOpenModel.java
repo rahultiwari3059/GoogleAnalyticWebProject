@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class ResponseElementModel {
+public class AppOpenModel {
 	@Id
 	@GeneratedValue
 	public int id;
@@ -19,59 +19,40 @@ public class ResponseElementModel {
 		this.id = id;
 	}
 	@Column
-	public String mGaId=null;
+	private String mGaId=null;
 	@Column
-	public String mGAdiscription=null;
-	
-	public int mMetricSize;
+	private String mGAdiscription=null;
+	private int mMetricSize;
 	@Column
-	public String mDate=null;
+	private String mDate=null;
 	@Column
-	public String mAndroidId=null;
-	
-	public String mConnectionType=null;
+	private String mAndroidId=null;
 	@Column
-	public String mEventCategory=null;
+	private String mConnectionType=null;
 	@Column
-	public String mTotalEvents=null;
-	public String mSessions=null;
-	public String mScreenViews=null;
-	public String mExit=null;
-	public String mExitRate=null;
-	
-	public int mrowArraySize;
-	 
+	private String mEventCategory=null;
+	@Column
+	private String mTotalEvents=null;
+	private String mSessions=null;
+	private String mScreenViews=null;
+
+	public String getmGaId() {
+		return mGaId;
+	}
+	public void setmGaId(String mGaId) {
+		this.mGaId = mGaId;
+	}
 	public String getmGAdiscription() {
 		return mGAdiscription;
 	}
 	public void setmGAdiscription(String mGAdiscription) {
 		this.mGAdiscription = mGAdiscription;
 	}
-	public int mDimensionSize;
-	public int getmDimensionSize() {
-		return mDimensionSize;
-	}
-	public void setmDimensionSize(int mDimensionSize) {
-		this.mDimensionSize = mDimensionSize;
-	}
 	public int getmMetricSize() {
 		return mMetricSize;
 	}
 	public void setmMetricSize(int mMetricSize) {
 		this.mMetricSize = mMetricSize;
-	}
-	
-	public int getMrowArraySize() {
-		return mrowArraySize;
-	}
-	public void setMrowArraySize(int mrowArraySize) {
-		this.mrowArraySize = mrowArraySize;
-	}
-	public String getmGaId() {
-		return mGaId;
-	}
-	public void setmGaId(String mGaId) {
-		this.mGaId = mGaId;
 	}
 	public String getmDate() {
 		return mDate;
@@ -127,6 +108,14 @@ public class ResponseElementModel {
 	public void setmExitRate(String mExitRate) {
 		this.mExitRate = mExitRate;
 	}
-	
+	public int getMrowArraySize() {
+		return mrowArraySize;
+	}
+	public void setMrowArraySize(int mrowArraySize) {
+		this.mrowArraySize = mrowArraySize;
+	}
+	private	 String mExit=null;
+	private String mExitRate=null;
+	private int mrowArraySize;
 
 }

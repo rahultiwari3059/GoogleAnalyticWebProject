@@ -1,7 +1,7 @@
 {
 
-  "startDate":"2016-08-26",
-  "endDate":"2016-08-27",
+  "startDate":"2016-10-10",
+  "endDate":"2016-10-11",
   "APPLICATION_NAME":"Appystore test app",
   "KEY_FILE_LOCATION":"/home/bridgeit/Desktop/springexp/HelloAnalytics/AppyGAReports-35a6c523765c.p12",
   "SERVICE_ACCOUNT_EMAIL":"appystorereport@appygareports.iam.gserviceaccount.com",
@@ -10,6 +10,21 @@
   "GAReportInfo": [
  
 {
+      "GAID": "1",
+      "GAdiscription": "App Open Data",
+      "metric": [
+        "ga:totalEvents"
+      ],
+      "dimension": [
+        "ga:date",
+        "ga:dimension1",
+        "ga:eventCategory"
+      ],
+      "dimensionfilter": [
+        "ga:eventCategory==App Open",
+        "ga:dimension15==10"
+      ]
+    },{
       "GAID": "2",
       "GAdiscription": "App Reopen Data - For Upgrade users",
       "metric": [
@@ -27,7 +42,6 @@
 
       ]
     }
-
 ]
 }
 

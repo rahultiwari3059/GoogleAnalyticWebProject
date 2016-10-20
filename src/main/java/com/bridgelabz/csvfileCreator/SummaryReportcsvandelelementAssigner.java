@@ -235,7 +235,7 @@ public class SummaryReportcsvandelelementAssigner {
 			}
 
 			// calling mainCsvCreator of MainCsvCreator
-			mainCsvCreatorObject.mainCsvCreator(responseElementModelArrayList, gaReportInputModel);
+			//mainCsvCreatorObject.mainCsvCreator(responseElementModelArrayList, gaReportInputModel);
 
 			// calling summaryReportCSvCreator of SummaryReportCSvCreator
 			summaryReportCSvCreatorObject.summaryReportCSvCreator(responseElementModelArrayList, gaReportInputModel,
